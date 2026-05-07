@@ -14,15 +14,58 @@
 *   **Referência:** "O chassi não é apenas suporte, é a armadura do seu projeto."
 </details>
 
-<details>
+<details open>
 <summary>⚡ Área 2: Fluxo de Elétrons (Eletrônica de Potência)</summary>
 
-*Conceito: O sistema circulatório. Entender como a energia flui da bateria para os motores sem fritar os componentes.*
+> "Entenda o circuito para dominar o movimento."
 
-*   **Destaque Técnico:** Montagem de Pontes H artesanais, capacitores de filtragem e reguladores de tensão.
-*   **Lema:** "Entenda o circuito para dominar o movimento."
+Esta área funciona como o sistema circulatório do robô. O objetivo é compreender como a energia flui da bateria para os motores e sensores sem danificar os componentes, utilizando técnicas que vão do artesanal ao profissional.
+
+### 📅 Cronograma de Estudos e Prática
+O cronograma abaixo une a fundamentação teórica à prática de bancada para a criação de sistemas de potência robustos.
+
+*   **Fase 1: Fundamentos de Placas de Circuito (PCI/PCB)**
+    *   **Teoria:** Entender o que é uma PCB e a transição da "montagem aranha" para trilhas condutoras. Estudo da terminologia básica: pads, ilhas, vias, trilhas e unidades (mils vs mm).
+    *   **Prática:** Identificação de componentes em sucatas eletrônicas (tecnologias PTH vs SMD).
+    *   **Referência:** Tutorial: O que é uma Placa de Circuito Impresso?
+
+*   **Fase 2: Design e Simulação (O Cérebro no Computador)**
+    *   **Teoria:** Aprender os passos do design moderno: captura esquemática, posicionamento de componentes e roteamento de trilhas.
+    *   **Prática:** Criar o primeiro esquema elétrico de uma Fonte Regulada de 5V (usando o regulador 7805) no software EasyEDA.
+    *   **Referência:** Curso de EasyEDA - Aula 01 | Livro Prototipação de Sistemas Eletrônicos
+
+*   **Fase 3: Fabricação Artesanal (Da Sucata à Inovação)**
+    *   **Teoria:** Estudo dos processos subtrativos: transferência térmica e corrosão química.
+    *   **Prática:** Fabricação de uma placa em casa usando papel fotográfico, ferro de passar e Percloreto de Ferro.
+    *   **Referência:** Guia Prático: Como fazer sua PCB em casa
+
+*   **Fase 4: Potência e Movimento (Pontes H e Reguladores)**
+    *   **Teoria:** Dimensionamento de trilhas baseado na corrente (Norma IPC-2221). Uso de dissipadores de calor para evitar estresse térmico.
+    *   **Prática:** Montagem de uma Ponte H artesanal para controle de motores DC e implementação de capacitores de filtragem para eliminar ruídos.
+    *   **Referência:** Regras de Design de Alta Frequência e Potência
+
+---
+
+### 🛠️ Ferramentas e Recursos Recomendados
+
+**Softwares Gratuitos:**
+*   **EasyEDA:** Recomendado para iniciantes por ser baseado em nuvem e integrado a bibliotecas de componentes reais.
+*   **TinkerCAD 3D:** Para modelagem simples de componentes e visualização espacial.
+
+**Materiais para Democratização (Baixo Custo):**
+*   **Substratos:** Placas de Fenolite (FR1/FR2) por serem mais baratas e fáceis de furar artesanalmente.
+*   **Corrosão:** Percloreto de Ferro ou misturas alternativas econômicas.
+*   **Soldagem:** Ferro de soldar simples, sugador de solda e malha dessoldadora para reaproveitamento de componentes de sucata.
+
+---
+
+### 📚 Referências de Pesquisa
+*   **Guia de Design de PCB (Definitivo):** Venture - Design e Layout.
+*   **Normas IPC (Padrão Industrial):** IPC-2221B (Design Genérico).
+*   **Componentes SMD e Soldagem:** Operação SMD - Guia de Boas Práticas.
+*   **Arquivos Gerber:** Como criar arquivos Gerber no Altium/EasyEDA.
+
 </details>
-
 <details open>
 <summary>💾 Área 3: A Lógica Positrônica (Microcontroladores)</summary>
 
