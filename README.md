@@ -15,55 +15,58 @@
 </details>
 
 <details open>
-<summary>⚡ Área 2: Fluxo de Elétrons (Eletrônica de Potência)</summary>
+<summary>⚡ Área 2: Fluxo de Elétrons (Eletrônica de Potência & Gestão de Energia)</summary>
 
-> "Entenda o circuito para dominar o movimento."
+> "O BMS é o cérebro que protege o coração (bateria) do seu robô."
 
-Esta área funciona como o sistema circulatório do robô. O objetivo é compreender como a energia flui da bateria para os motores e sensores sem danificar os componentes, utilizando técnicas que vão do artesanal ao profissional.
+Esta seção foca em como monitorar e controlar a energia das baterias de Lítio (Li-ion/LiPo), garantindo que operem dentro da **Área de Operação Segura (SOA)** para evitar explosões, superaquecimento ou degradação prematura. Aqui, o design de PCB e a química das células se encontram.
 
-### 📅 Cronograma de Estudos e Prática
-O cronograma abaixo une a fundamentação teórica à prática de bancada para a criação de sistemas de potência robustos.
 
-*   **Fase 1: Fundamentos de Placas de Circuito (PCI/PCB)**
-    *   **Teoria:** Entender o que é uma PCB e a transição da "montagem aranha" para trilhas condutoras. Estudo da terminologia básica: pads, ilhas, vias, trilhas e unidades (mils vs mm).
-    *   **Prática:** Identificação de componentes em sucatas eletrônicas (tecnologias PTH vs SMD).
-    *   **Referência:** Tutorial: O que é uma Placa de Circuito Impresso?
 
-*   **Fase 2: Design e Simulação (O Cérebro no Computador)**
-    *   **Teoria:** Aprender os passos do design moderno: captura esquemática, posicionamento de componentes e roteamento de trilhas.
-    *   **Prática:** Criar o primeiro esquema elétrico de uma Fonte Regulada de 5V (usando o regulador 7805) no software EasyEDA.
-    *   **Referência:** Curso de EasyEDA - Aula 01 | Livro Prototipação de Sistemas Eletrônicos
+### 📅 Cronograma de Estudos e Prática Integrado
+O cronograma a seguir expande as fases originais do guia, focando na democratização do acesso a circuitos de proteção complexos através de métodos artesanais e componentes acessíveis.
 
-*   **Fase 3: Fabricação Artesanal (Da Sucata à Inovação)**
-    *   **Teoria:** Estudo dos processos subtrativos: transferência térmica e corrosão química.
-    *   **Prática:** Fabricação de uma placa em casa usando papel fotográfico, ferro de passar e Percloreto de Ferro.
-    *   **Referência:** Guia Prático: Como fazer sua PCB em casa
+*   **Fase 1: Fundamentos de Proteção e Monitoramento**
+    *   **Teoria:** O que é um BMS? Entenda as funções de monitoramento de tensão, corrente, temperatura e o cálculo do Estado de Carga (SOC) e Estado de Saúde (SOH).
+    *   **Diferença Crucial:** Entenda a diferença entre um BMS completo e um PCM (Protection Circuit Module).
+    *   **Referência:** [Artigo: Sistema de Gerenciamento de Bateria (BMS) - STA Eletrônica](https://sta-eletronica.com.br)
 
-*   **Fase 4: Potência e Movimento (Pontes H e Reguladores)**
-    *   **Teoria:** Dimensionamento de trilhas baseado na corrente (Norma IPC-2221). Uso de dissipadores de calor para evitar estresse térmico.
-    *   **Prática:** Montagem de uma Ponte H artesanal para controle de motores DC e implementação de capacitores de filtragem para eliminar ruídos.
-    *   **Referência:** Regras de Design de Alta Frequência e Potência
+*   **Fase 2: Design de Circuitos de Gerenciamento (EasyEDA)**
+    *   **Teoria:** Escolha de CIs integrados (ex: IP5306) que combinam proteção e indicação de carga.
+    *   **Prática:** Desenhar um circuito de proteção e conversão (Boost) para eletrônicos de consumo usando o EasyEDA.
+    *   **Referência:** [Vídeo: How to make Battery Management Circuit | EasyEDA 2023](https://youtube.com)
 
----
+*   **Fase 3: Fabricação e Montagem de Packs 3S (12V)**
+    *   **Teoria:** Conexão em série (S) e paralelo (P) para aumentar tensão e capacidade.
+    *   **Prática:** Montagem manual de um módulo de proteção 3S (12.6V) com indicadores de LED feitos em casa.
+    *   **Referência:** [Vídeo: How To Make 12V 3S BMS Circuit at Home](https://youtube.com)
 
-### 🛠️ Ferramentas e Recursos Recomendados
+*   **Fase 4: Balanceamento de Células (Otimização da Vida Útil)**
+    *   **Teoria:** Por que as células "deslizam" em carga e como o balanceamento passivo vs. ativo corrigem isso.
+    *   **Prática:** Análise de diagramas de conexão para controle de MOSFETs e integração de circuitos de balanceamento.
+    *   **Referência:** [PDF: Battery Balancing: A Crucial Function of BMS - MPS](https://www.monolithicpower.com)
 
-**Softwares Gratuitos:**
-*   **EasyEDA:** Recomendado para iniciantes por ser baseado em nuvem e integrado a bibliotecas de componentes reais.
-*   **TinkerCAD 3D:** Para modelagem simples de componentes e visualização espacial.
-
-**Materiais para Democratização (Baixo Custo):**
-*   **Substratos:** Placas de Fenolite (FR1/FR2) por serem mais baratas e fáceis de furar artesanalmente.
-*   **Corrosão:** Percloreto de Ferro ou misturas alternativas econômicas.
-*   **Soldagem:** Ferro de soldar simples, sugador de solda e malha dessoldadora para reaproveitamento de componentes de sucata.
+*   **Fase 5: Segurança Funcional e Diagnóstico Avançado**
+    *   **Teoria:** Normas de segurança (ISO 26262/IEC 61508) e análise de modos de falha (FMEDA).
+    *   **Inovação:** O uso de sensores inteligentes e Machine Learning para monitoramento de precisão.
+    *   **Referência:** [Artigo Científico: Critical review and functional safety of a BMS](https://scholar.google.com)
 
 ---
 
-### 📚 Referências de Pesquisa
-*   **Guia de Design de PCB (Definitivo):** Venture - Design e Layout.
-*   **Normas IPC (Padrão Industrial):** IPC-2221B (Design Genérico).
-*   **Componentes SMD e Soldagem:** Operação SMD - Guia de Boas Práticas.
-*   **Arquivos Gerber:** Como criar arquivos Gerber no Altium/EasyEDA.
+### 🛠️ Recursos de Estudo (Links Rápidos)
+
+| Recurso | Descrição Técnico-Educativa | Link |
+| :--- | :--- | :--- |
+| **Guia Essencial BMS** | Definições de componentes, tipos e objetivos. | [Acessar](https://tenxerlabs.com) |
+| **Tutorial EasyEDA** | Projeto prático de circuito para baterias Li-ion. | [Acessar](https://pcbcupid.com) |
+| **BMS 3S Caseiro** | Tutorial de construção de módulo 12V para robótica. | [Acessar](https://circuitforum.com) |
+| **Segurança em EVs** | Considerações de segurança funcional (Texas Instruments). | [Acessar](https://ti.com) |
+
+---
+
+### 📚 Downloads de Documentação Técnica
+*   **Datasheets Sugeridos:** IP5306 (BMS Tudo-em-um), MP279x (Monitoramento de alta precisão).
+*   **Softwares Gratuitos:** [EasyEDA](https://easyeda.com) para design de PCB e [Simulink](https://www.mathworks.com) para modelagem de células.
 
 </details>
 <details open>
