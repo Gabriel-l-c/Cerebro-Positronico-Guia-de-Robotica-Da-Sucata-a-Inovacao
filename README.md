@@ -125,7 +125,7 @@ O aprendizado é dividido em quatro fases progressivas, unindo a teoria das font
 ---
 
 ## 📚 Fontes e Materiais para Download
-
+*   **Instructables(site para replicar projetos e estudar):** Disponível via (https://www.instructables.com)
 ### 📕 Livros e Manuais Técnicos
 *   **Electronics For Dummies (3rd Ed. - PDF):** [Download Direto](https://schematicsforfree.com)
 *   **Robot Builders Source Book:** [Repositório GitHub](https://github.com)
